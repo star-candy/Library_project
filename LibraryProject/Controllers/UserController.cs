@@ -68,13 +68,13 @@ namespace LibraryProject.Controllers
                         book.Description
                     );
                     Models.LoanRecord.InsertLoan(_user.UserId, bookDb, System.DateTime.Now.AddDays(14));
-                    _view.ShowMessage($"'{book.Title}' 이(가) 대출되었습니다.");
+                    _view.ShowMessage($"'{book.Title}'\n이(가) 대출되었습니다.");
                     _view.DisplayLoans(Models.LoanRecord.GetLoansByUser(_user.UserId).FindAll(l => l.ReturnDate == null));
                 }
                 else
                 {
                     _libraryService.LoanBook(book);
-                    _view.ShowMessage($"'{book.Title}' 이(가) 대출되었습니다.");
+                    _view.ShowMessage($"'{book.Title}'\n이(가) 대출되었습니다.");
                     _view.DisplayLoans(_libraryService.GetCurrentLoans());
                 }
             }

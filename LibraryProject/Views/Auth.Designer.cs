@@ -16,20 +16,20 @@ namespace LibraryProject.Views.Auth
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Noto Sans KR", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 129);
-            label1.Location = new System.Drawing.Point(89, 21);
+            label1.Font = new System.Drawing.Font("Noto Sans KR", 14F, System.Drawing.FontStyle.Bold);
+            label1.Location = new System.Drawing.Point(99, 21);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(151, 29);
+            label1.Size = new System.Drawing.Size(183, 35);
             label1.TabIndex = 0;
             label1.Text = "도서 관리 시스템";
             // 
             // txtId
             // 
-            txtId.Font = new System.Drawing.Font("Noto Sans KR", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 129);
+            txtId.Font = new System.Drawing.Font("Noto Sans KR", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 129);
             txtId.Location = new System.Drawing.Point(151, 82);
             txtId.Name = "txtId";
-            txtId.PlaceholderText = "아이디";
-            txtId.Size = new System.Drawing.Size(125, 29);
+            txtId.PlaceholderText = "아이디를 입력하세요";
+            txtId.Size = new System.Drawing.Size(135, 32);
             txtId.TabIndex = 1;
             // 
             // txtPassword
@@ -38,8 +38,8 @@ namespace LibraryProject.Views.Auth
             txtPassword.Location = new System.Drawing.Point(151, 122);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.PlaceholderText = "비밀번호";
-            txtPassword.Size = new System.Drawing.Size(125, 29);
+            txtPassword.PlaceholderText = "비밀번호를 입력하세요";
+            txtPassword.Size = new System.Drawing.Size(135, 29);
             txtPassword.TabIndex = 2;
             // 
             // label2
@@ -74,9 +74,9 @@ namespace LibraryProject.Views.Auth
             btnLogin.Text = "로그인";
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
-            //
+            // 
             // btnSignUp
-            //
+            // 
             btnSignUp.BackColor = System.Drawing.SystemColors.ButtonFace;
             btnSignUp.Font = new System.Drawing.Font("Noto Sans KR Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 129);
             btnSignUp.Location = new System.Drawing.Point(223, 165);

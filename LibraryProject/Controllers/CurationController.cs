@@ -44,6 +44,7 @@ namespace LibraryProject.Controllers
             // 추천 로직 수행 중 오류 방지를 위한 try-catch
             try
             {
+                _view.SetLoadingStatus(true);
                 // 라이브러리 서비스에서 이전 대출 내역(History)을 가져옴
                 System.Collections.Generic.List<Models.LoanRecord> history;
                 if (_user != null)
@@ -87,6 +88,10 @@ namespace LibraryProject.Controllers
             {
                 // 실패 메시지와 예외 메시지를 뷰에 띄워줌
                 _view.ShowMessage($"추천 도서를 가져오는 중 오류가 발생했습니다: {ex.Message}");
+            }
+            finally
+            {
+                _view.SetLoadingStatus(false);
             }
         }
         private void View_LoanRequested(object sender, BookItem book)
